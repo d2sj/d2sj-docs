@@ -3,7 +3,7 @@ import { set_sidebar } from "./utils/auto_sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // base: "/d2sj-docs/",
+  base: "/d2sj-docs/",
   head: [["link", { rel: "icon", href: "/d2sj-docs/logo.svg" }]],
   title: "我的文档项目",
   description: "A VitePress Site",
