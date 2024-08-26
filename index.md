@@ -7,7 +7,7 @@ hero:
   text: "一个文档站点"
   tagline: 三十年河东,三十年河西,再来就六十啦
   image:
-    src: /404.svg
+    src: /svg/open_source.svg
     alt: 背景图片
   actions:
     - theme: brand
