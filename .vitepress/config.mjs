@@ -23,7 +23,7 @@ export default defineConfig({
   description: "A VitePress Site",
   //删除url中.html后缀
   cleanUrls: true,
-  //指定源目录,默认情况下与项目根目录相同,srcDir是相当于项目根目录解析的
+  //指定源目录,默认情况下与项目根目录相同,srcDir是相当于项目根目录解析的,如果修改了源目录,则所有路由均需要对应修改,否则会404
   srcDir: ".",
   //排除应作为源内容输出的.md文件
   srcExclude: ["**/README.md", "**/TODO.md"],
@@ -35,6 +35,10 @@ export default defineConfig({
   appearance: "dark",
   //是否使用git获取每个页面最后更新的时间戳,默认为false
   lastUpdated: true,
+  //路由重写,将a路径在浏览器url上显示为b路径,(若路径重写,则自定义方法,用于自动生成左侧菜单的路径也需要同步修改)
+  // rewrites: {
+  //   'docs/zh/normal/vitepress.md': '/zh/index.md'
+  // },
   //主题级选项
   themeConfig: {
     //网页左上角logo
@@ -45,6 +49,8 @@ export default defineConfig({
     },
     //替换导航中默认站点标题,当设置为false时禁用导航栏中标题,这在logo已经包含标题文本时很有用
     // siteTitle:false,
+
+    
 
     outline: {
       //右侧菜单标题
@@ -60,15 +66,16 @@ export default defineConfig({
       {
         text: "正常版",
         items: [
-          { text: "首页", link: "/" },
-          { text: "markdown示例", link: "/" },
+          { text: "首页", link: "/docs/zh/normal/index" },
+          { text: "vitepress", link: "/docs/zh/normal/vitepress" },
+          { text: "正则表达式", link: "/docs/zh/normal/正则表达式" },
         ],
       },
       {
         text: "傻瓜版",
         items: [
-          { text: "首页", link: "/" },
-          { text: "markdown示例", link: "/" },
+          { text: "首页", link: "/docs/zh/clever/index" },
+          { text: "vitepress傻瓜搭建", link: "/docs/zh/clever/vitepress文档网站搭建" },
         ],
       },
       //导航菜单
@@ -77,8 +84,18 @@ export default defineConfig({
         link: "/docs/zh/practical-software-official-website/",
       },
     ],
-    //自定义方法,用于自动生成左侧菜单
+
+    //
+    
+
+    //自定义方法,用于自动生成左侧菜单.上面路径为路由,下面路径为实际文件路径
     sidebar: {
+      "/docs/zh/clever": set_sidebar(
+        "/docs/zh/clever"
+      ),
+      "/docs/zh/normal": set_sidebar(
+        "/docs/zh/normal"
+      ),
       "/docs/zh/practical-software-official-website": set_sidebar(
         "/docs/zh/practical-software-official-website"
       ),
