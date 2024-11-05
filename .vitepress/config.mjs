@@ -69,6 +69,9 @@ export default defineConfig({
           { text: "首页", link: "/docs/zh/normal/index" },
           { text: "vitepress", link: "/docs/zh/normal/vitepress" },
           { text: "正则表达式", link: "/docs/zh/normal/正则表达式" },
+          { text: "函数式编程", link: "/docs/zh/normal/函数式编程" },
+          { text: "单元测试", link: "/docs/zh/normal/单元测试" },
+          { text: "debian12.7", link: "/docs/zh/normal/debian12" },
         ],
       },
       {
@@ -77,7 +80,7 @@ export default defineConfig({
           { text: "首页", link: "/docs/zh/clever/index" },
           { text: "vitepress傻瓜搭建", link: "/docs/zh/clever/vitepress文档网站搭建" },
         ],
-      },
+      }, 
       //导航菜单
       {
         text: "实用网站",
