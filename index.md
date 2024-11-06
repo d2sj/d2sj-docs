@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "我的文档项目"
+  name: "我的文档记录"
   text: "一个文档站点"
   tagline: 三十年河东,三十年河西,再来就六十啦
   image:

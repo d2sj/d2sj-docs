@@ -12,7 +12,7 @@ export default defineConfig({
   //设置站点默认语言,默认为中文
   lang: "zh-CN",
   //网页左上角标题,它还将用作所有单独页面标题的后缀,除非定义了titleTemplate
-  title: "d2sj的文档项目",
+  title: "d2sj的文档记录",
   /**
    * 自定义每个页面的标题后缀,例 titleTemplate:'d2sj's document '
    * 完全自定义标题展现,:title表示根据.md文件中第一个<h1>标题中推断出的文本,例 titleTemplate:':title ****'
@@ -72,6 +72,7 @@ export default defineConfig({
           { text: "函数式编程", link: "/docs/zh/normal/函数式编程" },
           { text: "单元测试", link: "/docs/zh/normal/单元测试" },
           { text: "debian12.7", link: "/docs/zh/normal/debian12" },
+          { text: "IntelliJ IDEA", link: "/docs/zh/normal/IntelliJ IDEA" },
         ],
       },
       {
